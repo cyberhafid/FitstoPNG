@@ -30,6 +30,9 @@ class App extends Component {
     console.log("this.props.imageStore", this.props.imageStore)
     return (
      <div className={css(styles.container)}>
+          <ImageLoader imageStore={this.props.imageStore} />
+          <Viewer image={this.props.imageStore.selectedImage} />
+
          <h1>{this.props.appStore.name}</h1>
        {this.props.imageStore.selectedImage === null && (
           <ImageLoader imageStore={this.props.imageStore} />

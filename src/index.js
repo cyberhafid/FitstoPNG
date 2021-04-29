@@ -10,6 +10,7 @@ import ReactDOM from 'react-dom';
 import App from "./components/App";
 import appStore from "./stores/appStore";
 import imageStore from "./stores/imageStore";
+import { BrowserRouter as BrowserRouter } from "react-router-dom";
 
 configure({ enforceActions: true });
 
@@ -21,7 +22,9 @@ const stores = {
 
 ReactDOM.render(
   <Provider {...stores}>
-  {/*   <App />  */}
+ 
+      <App />
+
   </Provider>,
   document.getElementById('root')
 );
